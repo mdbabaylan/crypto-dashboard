@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import MarketCapComparison from "./MarketCapComparison";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="min-h-screen bg-gray-100 text-center p-8">
+      <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-8">
+        <h1 className="text-4xl font-bold text-blue-600 mb-4">
+          Crypto Dashboard
+        </h1>
+        <p className="text-lg text-gray-700 mb-8">
+          BTC as #1, and a rough gauge on DeFi Altcoins vs Top 10 memecoins
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      </div>
+      <div className="mt-10">
+        { <MarketCapComparison />}
+      </div>
+
     </div>
   );
 }
